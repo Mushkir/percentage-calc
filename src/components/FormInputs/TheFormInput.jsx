@@ -10,7 +10,7 @@ const TheFormInput = ({
   errors,
 }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-5">
       <label htmlFor={id} className="mb-1 text-dark_25">
         {label}
       </label>

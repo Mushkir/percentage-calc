@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 
 const TheNavBar = () => {
   return (
-    <div className=" font-Sen bg-dark_100 px-20 py-10 text-dark_25 flex items-center justify-between">
-      <h4 className="text-xl">Simple Percentage Calculator</h4>
+    <div className=" font-Sen bg-dark_100 px-5 sm:px-20 py-10 text-dark_25 sm:flex items-center justify-between text-center ">
+      <h4 className="sm:text-xl mb-3">Simple Percentage Calculator</h4>
 
-      <Link to={"/"} className="flex items-center gap-2 hover:underline">
+      <Link
+        to={"/"}
+        className="flex items-center justify-center gap-2 hover:underline "
+      >
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

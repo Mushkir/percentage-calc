@@ -14,11 +14,13 @@ function App() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schemaValidation),
   });
 
+  const [userEnteredPrice, setUserEnteredPrice] = useState(0);
   const [price, netPrice] = useState(0);
   const [discount, DiscountPrice] = useState(0);
 
@@ -29,16 +31,19 @@ function App() {
 
     const netAmount = amount - discountAmount;
 
+    setUserEnteredPrice(amount);
+
     netPrice(netAmount);
 
     DiscountPrice(discountAmount);
-    // console.log(netAmount, discountAmount);
+
+    reset();
   };
 
   return (
-    <div className=" font-Sen bg-dark_25 min-h-screen pt-20">
+    <div className=" font-Sen bg-dark_25 min-h-screen pt-10 sm:pt-20 p-3">
       <form
-        className=" bg-dark_100 w-[500px] mx-auto p-5 rounded-lg"
+        className=" bg-dark_100 w-full sm:w-[500px] mx-auto p-5 rounded-lg"
         onSubmit={handleSubmit(showPriceDetails)}
       >
         <TheFormInput
@@ -51,14 +56,14 @@ function App() {
           errors={errors.amount}
         />
 
-        <button className="bg-dark_25 mt-5 px-5 py-2 rounded-md hover:bg-dark_50 hover:transition 500 hover:text-dark_25">
+        <button className="bg-dark_25 mt-5 px-5 py-2 rounded-md hover:bg-dark_50 hover:transition 500 hover:text-dark_25 w-full sm:w-[150px]">
           Calculate
         </button>
 
         {/* Output */}
         <div className=" text-dark_25 mt-5">
           <span className=" text-dark_27">You Entered Amount: </span>
-          <span>Rs. {price}</span>
+          <span>Rs. {userEnteredPrice}</span>
         </div>
 
         <div className=" text-dark_25 mt-5">

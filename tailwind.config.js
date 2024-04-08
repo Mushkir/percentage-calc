@@ -10,6 +10,7 @@ export default {
         dark_100: "#003C43",
         dark_75: "#135D66",
         dark_50: "#77B0AA",
+        dark_27: "#cce4de",
         dark_25: "#E3FEF7",
       },
     },

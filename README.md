@@ -2,4 +2,4 @@
 
 ## Author
 
-- Mohamed Mushkir(https://www.instagram.com/mushkir_9611/)
+- [Mohamed Mushkir](https://www.instagram.com/mushkir_9611/)

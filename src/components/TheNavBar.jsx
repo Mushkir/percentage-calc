@@ -6,7 +6,8 @@ const TheNavBar = () => {
       <h4 className="sm:text-xl mb-3">Simple Percentage Calculator</h4>
 
       <Link
-        to={"/"}
+        to={"https://github.com/Mushkir/percentage-calc"}
+        target="_blank"
         className="flex items-center justify-center gap-2 hover:underline "
       >
         <div>

@@ -6,7 +6,6 @@ import { useState } from "react";
 import currencyFormat from "../utils/currencyFormat";
 
 const TheFindTotalPage = () => {
-  // const [priceList, setPriceList] = useState([]);
   const [netAmount, setNetAmount] = useState([]);
 
   const schema = z.object({
@@ -45,7 +44,7 @@ const TheFindTotalPage = () => {
   };
 
   return (
-    <div>
+    <div className=" px-2 sm:p-0">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="bg-dark_100 w-full sm:w-[500px] mx-auto p-5 rounded-lg"

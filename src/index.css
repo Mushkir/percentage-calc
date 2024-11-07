@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-dark_25;
+}
+
 nav a.active {
   @apply bg-dark_100 text-dark_25 rounded-full sm:rounded-lg;
 }

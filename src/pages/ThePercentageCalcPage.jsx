@@ -51,7 +51,7 @@ const ThePercentageCalPage = () => {
     reset();
   };
   return (
-    <div>
+    <div className="px-2 sm:p-0">
       <form
         className=" bg-dark_100 w-full sm:w-[500px] mx-auto p-5 rounded-lg"
         onSubmit={handleSubmit(showPriceDetails)}

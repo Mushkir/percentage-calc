@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav a.active {
+  @apply bg-dark_100 text-dark_25 rounded-full sm:rounded-lg;
+}

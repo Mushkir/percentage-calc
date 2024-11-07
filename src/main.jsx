@@ -4,6 +4,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import TheGuestLayout from "./layouts/Guest.jsx";
+import ThePercentageCalcPage from "./pages/ThePercentageCalcPage";
+import TheFindTotalPage from "./pages/TheFindTotalPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,16 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App />,
+        children: [
+          {
+            path: "/",
+            element: <ThePercentageCalcPage />,
+          },
+          {
+            path: "/calcTotal",
+            element: <TheFindTotalPage />,
+          },
+        ],
       },
     ],
   },

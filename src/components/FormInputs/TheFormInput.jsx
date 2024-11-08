@@ -13,6 +13,7 @@ const TheFormInput = ({
     <div className="flex flex-col mb-5">
       <label htmlFor={id} className="mb-1 text-dark_25">
         {label}
+        <span className="text-red-500">*</span>:
       </label>
       <input
         type={type}

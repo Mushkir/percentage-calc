@@ -3,6 +3,7 @@ import TheFormInput from "../components/FormInputs/TheFormInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
+import currencyFormat from "../utils/currencyFormat";
 
 const ThePercentageCalPage = () => {
   const schemaValidation = z.object({
@@ -83,7 +84,7 @@ const ThePercentageCalPage = () => {
         {/* Output */}
         <div className=" text-dark_25 mt-5">
           <span className=" text-dark_27">You Entered Amount: </span>
-          <span>Rs. {userEnteredPrice}</span>
+          <span>{currencyFormat(userEnteredPrice)}</span>
         </div>
 
         <div className=" text-dark_25 mt-5">
@@ -93,12 +94,12 @@ const ThePercentageCalPage = () => {
 
         <div className=" text-dark_25 mt-5">
           <span className=" text-dark_27">Discount Price: </span>
-          <span>Rs. {discount}</span>
+          <span>{currencyFormat(discount)}</span>
         </div>
 
         <div className=" text-dark_25 mt-5">
           <span className=" text-dark_27">Net Amount: </span>
-          <span>Rs. {price}</span>
+          <span>{currencyFormat(price)}</span>
         </div>
       </form>
     </div>
